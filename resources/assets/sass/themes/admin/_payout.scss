@@ -1,0 +1,15 @@
+/* payout scss */
+
+.content-filter{
+  padding: 0 30px;
+  margin: 15px 0;
+}
+.content-info{
+  @extend .content-filter;
+  margin: 15px 0 0;
+}
+.pagination{
+	a{
+		cursor:pointer;
+	}
+}

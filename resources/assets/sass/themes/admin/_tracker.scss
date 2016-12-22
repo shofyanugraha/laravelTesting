@@ -1,0 +1,46 @@
+/*tracker*/
+.track{
+	.timeline{
+		&:before{
+  			background-color: #888!important;
+  			width: 1px!important;
+		}
+		.timeline-panel{
+			background: #fff!important;
+			border:1px solid #ddd!important;
+			border-radius:0!important;
+			&:after{
+			  border:none!important;
+			}
+			&:before{
+			  border:none!important;
+			}
+		}
+	}
+}
+
+.content-info{
+	.row{
+		.col-md-6{
+			.panel{
+				background:#cfd5d8;
+				border:1px solid #aaa;
+				.panel-body{
+					.form-inline{
+						.form-group{
+							padding:0;
+							margin:0 10px 0 0;
+							.form-control{
+								width: 100%;
+							}
+							.btn{
+								width: 100%;
+								border-radius:0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

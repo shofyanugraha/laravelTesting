@@ -1,0 +1,16 @@
+ul.countdown { 
+	li {
+		display: inline-block;
+		span { 
+			font-size: 48px; 
+		}
+		&.seperator {
+		    font-size: 36px;
+    		line-height: 68px;
+    		padding: 0 20px;
+		}
+		p {
+			font-size: 20px; 
+		}
+	}
+}

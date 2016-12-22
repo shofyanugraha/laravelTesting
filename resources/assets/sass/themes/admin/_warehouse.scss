@@ -1,0 +1,80 @@
+/* warehouse */
+.box{
+	&.pos-rel{
+		position:relative;
+		.pos-abs{
+			position:absolute;
+			&.table-info{
+				bottom:15px;
+				left: 15px;
+				width:auto;
+				white-space: nowrap;
+				.table-info-item{
+					display:inline;
+					margin: 0 0 0 5px;
+				}
+			}
+			&.table-filter{
+				top:15px;
+				right: 15px;
+			    max-width: 250px;
+			    width: 100%;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+//show detail
+.table-header{
+	font-weight:bold;
+	border-top:1px solid #ddd;
+	border-bottom:2px solid #ddd;
+	padding:10px 5px;
+	margin:10px 0 5px;
+}
+
+#btn-assets{
+	@extend .col-md-3;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	float:none;
+	margin: 20px 0 0;
+}
+
+//modal
+.modal-body{
+	.collapse{
+		display: block!important;
+		height: auto!important;
+	}
+}
+
+//comment
+#comment-list{
+	margin-top:15px;
+	.comment-outer{
+		padding:20px 0;
+		border-top:1px solid #ddd;
+	}
+}
+
+//status campaign
+.status-campaign{
+	&.status-bold{
+		font-weight:600;
+	}	
+	.color-red{
+		color:red!important;
+	}
+	.color-green{
+		color:green!important;
+	}
+	.color-blue{
+		color:blue!important;
+	}
+	.color-light-blue{
+		color:#3498db!important;
+	}
+}

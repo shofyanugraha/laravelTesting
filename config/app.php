@@ -162,12 +162,16 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Caffeinated\Themes\ThemesServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
 
-        //
+        Ixudra\Curl\CurlServiceProvider::class,
+        Caffeinated\Modules\ModulesServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -225,6 +229,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Curl'          => Ixudra\Curl\Facades\Curl::class,
+        'Module' => Caffeinated\Modules\Facades\Module::class,
+        'Theme' => Caffeinated\Themes\Facades\Theme::class,
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class
+
 
     ],
 

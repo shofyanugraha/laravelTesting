@@ -1,0 +1,184 @@
+body {
+	font-family: 'Lato', sans-serif;
+	color: #081F2F;
+}
+p {
+	line-height: 24px;
+}
+
+a {
+	color: #279AAC;
+}
+
+/* Navigation */
+.navbar-light {
+	background: #fff;
+	border-bottom: 1px solid rgba(64%, 70%, 72%, .3);
+	box-shadow: 0px 2px 2px 0px rgba(64%, 70%, 72%, .2);
+	border-radius: 0;
+	.navbar-nav {
+		.nav-link {
+			color: #153134;
+			font-size: 16px;
+			padding: 15px 0;
+		}
+		.nav-item.btn{
+			padding-top: 0;
+			padding-bottom: 0;
+			position: relative;
+			top: 3px;
+			.nav-link {
+				padding: 10px 0;
+			}
+		}
+	}
+} 
+
+
+/* Button */
+.btn-primary {
+	background: #0C446A;
+	border-color: #0C446A;
+	border-bottom: 4px solid #063352;
+	color: #fff;
+	&:hover, &:focus{
+		background: #063352;
+		border-color: #063352;
+		color: inherit;
+	}
+}
+
+.btn-info {
+	background: #0C446A;
+	border-color: #279AAC;
+	border-bottom: 4px solid #1A838F;
+	color: #fff;
+	&:hover, &:focus{
+		background: #063352;
+		border-color: #063352;
+		color: inherit;
+	}
+}
+
+.btn-warning {
+	background: #E7B520;
+	border-color: #E7B520;
+	border-bottom: 4px solid #8F6C05;
+	color: #142A39;
+	&:hover, &:focus{
+		background: #8F6C05;
+		border-color: #8F6C05;
+		color: #142a39;
+	}
+}
+.form-group {
+	margin-bottom: 1.3333333333em;
+}
+.form-control {
+	border-radius: 5px;
+	padding: 0.6666666667rem 0.9333333333rem;
+}
+
+/* Section */
+
+section {
+	padding: 80px 0;
+}
+
+.sc-header {
+	background: #A1CBD7;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.sc-title {
+	text-align: center;
+	margin-bottom: 40px;
+	font-weight: 800;
+	&.sc-inline {
+		display: inline-block;
+	}
+}
+
+/* Footer */
+
+.footer {
+	border-top: 1px solid #203a4c;
+	background: #142A39;
+	padding: 50px 0;
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+}
+.footer a {
+	color: #fff;
+	&:hover, &:focus {
+		color: #2F9CAD;
+		text-decoration: none;
+	}
+}
+
+.copyright {
+	background: #0D1C27;
+	padding: 30px 0;
+	text-align: center;
+	color: #fff;
+	p {
+		margin: 0;
+	}
+}
+
+/* Widget */
+
+.widget {
+	.nav, p {
+		margin: 0;
+	}
+}
+
+.widget-nav {
+	li {
+		line-height: 34px;
+		a {
+			display: block;
+		}
+	}
+}
+
+.icon {
+	width: 15px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+
+.widget-about {
+	line-height: 24px;
+}
+
+.form-widget 
+{
+	h5{
+		margin-bottom: .8em;
+	}
+	form{	
+		margin-bottom: 1em;
+	}
+	.form-control {
+		padding-right: 3rem;
+	}
+}
+
+.nav-social {
+	font-size: 18px;
+}
+
+.help-block {
+	margin-top: 5px;
+	font-size: 12px;
+	.list-unstyled {
+		margin: 0;
+	}
+	color: #d9534f;
+}
