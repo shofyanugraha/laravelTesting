@@ -60,7 +60,6 @@ class CategoryController extends Controller
     	$param['admin_id'] = session('user.0.id');
     	$param['_method'] = 'patch';
     	$param['id'] = $id;
-    	
     		$post = \Curl::to(env('API_URL').'category')
 	    		->withData($param)
 				->asJson()

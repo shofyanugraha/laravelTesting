@@ -50,13 +50,17 @@ class PostController extends Controller
 		        ->post();	
     	} else {
     		// $param['image'] = file_get_contents($_FILES['image']);
-    		dd($_FILES['image']);
+    		$request->file('image')->move(public_path().  '/uploads', 'image.png');
+			// Assemble Login Credentials
+			$path = public_path().'/uploads/'. 'image.png';
+			$type = pathinfo($path, PATHINFO_EXTENSION);
+			$data = file_get_contents($path);
+			$image = 'data:image/' . $type . ';base64,' . base64_encode($data);
+			$param['image'] = $image;
     		$post = \Curl::to(env('API_URL').'post')
-				->withContentType('multipart/form-data')
-	    		->withData($param)
-	    		->containsFile(true)
+				->withData($param)
+				->asJson()
 		        ->post();	
-		    dd($post);
     	}
     	
 	    if($post->meta->status == true) {
