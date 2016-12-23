@@ -13,6 +13,9 @@
     <!-- Main content -->
     <section class="content">
       <!-- Default box -->
+      <p class="text-right">
+        <a class="btn btn-success" href="{{url('/category/create')}}">Create</a>
+      </p>
       <div class="box">
         <div class="box-body">
           <table id="campaignTable" class="table" cellspacing="0" width="100%">
@@ -31,7 +34,6 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $sdata->name }}</td>
                     <td>
-                      <a class="btn btn-primary btn-xs" target="_blank" href="{{ url('category/'.$sdata->id ) }}">Detail</a>
                       <a class="btn btn-warning btn-xs" target="_blank" href="{{ url('category/'.$sdata->id.'/edit' ) }}">Edit</a>
                     </td>
                 </tr>
@@ -75,20 +77,6 @@
   @section('js')
   <script>
     $(document).ready(function() {
-      $(".select2").select2();
-
-      var FromEndDate = new Date();
-      
-      $('#started').datepicker({
-        format: 'dd-mm-yyyy',
-        endDate: FromEndDate,
-      });
-
-      $('#ended').datepicker({
-        format: 'dd-mm-yyyy',
-        endDate: FromEndDate,
-      });
-
       $(document).on('click','.btn-pagination',function(e){
         e.preventDefault();
         var page = $(this).attr('data-page');

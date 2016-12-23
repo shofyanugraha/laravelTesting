@@ -27,6 +27,7 @@ elixir(function(mix) {
 	    	'../../../node_modules/mustache/mustache.min.js',
 	    	'../../../node_modules/admin-lte/dist/js/app.min.js',
 	    	'../../../node_modules/parsleyjs/dist/parsley.min.js',
+	    	'../../../node_modules/summernote/dist/summernote.min.js',
 	    	'app.js',
 	    ], 
 	    'public/themes/admin/assets/js/app.js')

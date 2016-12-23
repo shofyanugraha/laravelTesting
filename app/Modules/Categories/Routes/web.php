@@ -13,4 +13,9 @@
 
 Route::group(['prefix' => 'category', 'middleware'=>'auth'], function () {
     Route::get('/', 'CategoryController@index');
+    Route::get('/create', 'CategoryController@create');
+    Route::post('/create', 'CategoryController@store');
+
+    Route::get('/{id}/edit', 'CategoryController@edit');
+    Route::post('/{id}/edit', 'CategoryController@update');
 });

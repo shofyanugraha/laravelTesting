@@ -15,4 +15,9 @@ Route::get('/dashboard', 'PostController@index');
 
 Route::group(['prefix' => 'post', 'middleware'=>'auth'], function () {
     Route::get('/', 'PostController@index');
+    Route::get('/create', 'PostController@create');
+    Route::post('/create', 'PostController@store');
+    Route::get('/{id}/edit', 'PostController@edit');
+    Route::post('/{id}/edit', 'PostController@update');
+    Route::get('/status/{id}/{status}', 'PostController@status');
 });

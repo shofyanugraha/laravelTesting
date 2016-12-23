@@ -6,7 +6,7 @@
         Post
       </h1>
       <ol class="breadcrumb">
-        <li><a href="{{ url('/dashboard') }}"><i class="ion-ios-home-outline"></i> Home</a></li>
+        <li><a href="{{ url('/dashboard') }}"><i class="fa fa-home"></i> Home</a></li>
         <li class="active">Post</li>
       </ol>
     </section>
@@ -38,12 +38,15 @@
             <label>Kerworlds</label>
             <div class="form-group">
               <input type="text" name="q" class="form-control" id="search-q" placeholder="{{ isset($param['q']) ? $param['q'] : 'Cari...' }}">
-            
             </div><!-- /form-group -->
           </div>
           <div class="col-md-2">
             <label>&nbsp;</label>
-            <button type="submit" class="btn btn-block btn-primary">Cari</button>
+            <button type="submit" class="btn btn-block btn-primary">Search</button>
+          </div>
+          <div class="col-md-2">
+            <label>&nbsp;</label>
+            <a href="{{ url('/post/create') }}" class="btn btn-block btn-success">Create</a>
           </div>
         </div>
       </form>
@@ -83,7 +86,17 @@
                     <td><span class="label label-danger">Suspended</span></td>
                     @endif
                     <td>
-                      <a class="btn btn-primary btn-xs" target="_blank" href="{{ url('post/'.$sdata->id ) }}">Detail</a>
+                      @if(session('user.0.roles.0.slug') == 'administrator')
+                        @if($sdata->status != 1 AND $sdata->status != 3 )
+                          <a class="btn btn-success btn-xs"  href="{{ url('post/status/'.$sdata->id.'/1' ) }}">Publish</a>
+                        @endif
+                        @if($sdata->status != 3)
+                        <a class="btn btn-danger btn-xs"  href="{{ url('post/status/'.$sdata->id.'/3' ) }}">Suspend</a>
+                        @else 
+
+                        @endif
+
+                      @endif
                       <a class="btn btn-warning btn-xs" target="_blank" href="{{ url('post/'.$sdata->id.'/edit' ) }}">Edit</a>
                     </td>
                 </tr>
