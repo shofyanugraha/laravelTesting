@@ -12,6 +12,8 @@ use Theme;
 class AuthenticationController extends Controller
 {
     public function index(Request $request) {
+    	if(session('user')) 
+    		return redirect('/dashboard');
 		return Theme::view('site.login');
 	}
 	

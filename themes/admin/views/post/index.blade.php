@@ -61,7 +61,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
-                    <th>Category</th>
                     <th>Created</th>
                     <th>Status</th>
                     <th></th>
@@ -74,7 +73,6 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $sdata->title }}</td>
-                    <td><a href="{{ url('/post') }}?category={{$sdata->category->slug}}">{{ $sdata->category->name }}</a></td>
                     <td>{{ $sdata->created_at }}</td>
                     @if($sdata->status == 0)
                     <td><span class="label label-default">Pending</span></td>

@@ -19,13 +19,12 @@ class PostController extends Controller
     	$param['sort'] = $request->input('sort', 'latest');
     	$param['offset'] = $request->input('offset', 10);
 		$param['result_type'] = $request->input('result_type');
-		$param['q'] = $request->input('result_type');
+		$param['q'] = $request->input('q');
 
     	$post = \Curl::to(env('API_URL').'post')
 			->withData($param)
 			->asJson()
 	        ->get();
-	    
     	return \Theme::view('post.index', compact('post', 'param'));
     }
 
@@ -65,6 +64,8 @@ class PostController extends Controller
     	
 	    if($post->meta->status == true) {
 	    	return redirect('/post');
+	    } else {
+
 	    }
 	    
     	return \Theme::view('post.create', compact('post', 'category'));

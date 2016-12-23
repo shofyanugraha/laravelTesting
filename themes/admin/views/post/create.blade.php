@@ -24,15 +24,15 @@
             <div class="panel-body">
               <div class="form-group">
                 <label>Title</label>
-                <input class="form-control" type="text" name="title"></input>
+                <input class="form-control" type="text" required="required" name="title"></input>
               </div>
               <div class="form-group type type-image" style="display: block;">
                 <label>Image</label>
-                <input class="form-control" type="file" name="image"></input>
+                <input class="form-control" type="file" name="image">
               </div>
               <div class="form-group type type-video"  style="display: none;">
                 <label>URL</label>
-                <input class="form-control" type="url" name="url"></input>
+                <input class="form-control" type="url" name="url" placeholder="Video Youtube">
               </div>
               <div class="form-group">
                 <label>Description</label>

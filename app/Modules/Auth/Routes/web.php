@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+Route::get('/', 'AuthenticationController@index');
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/login', 'AuthenticationController@index');
     Route::post('/session', 'AuthenticationController@session');
