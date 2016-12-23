@@ -11,10 +11,6 @@
 |
 */
 
-Route::group(['prefix' => 'auth'], function () {
-    Route::get('/login', 'AuthenticationController@index');
-    Route::post('/session', 'AuthenticationController@session');
-});
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('/logout', 'AuthenticationController@logotu');
+Route::group(['prefix' => 'category', 'middleware'=>'auth'], function () {
+    Route::get('/', 'CategoryController@index');
 });

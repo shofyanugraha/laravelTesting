@@ -12,8 +12,12 @@ use Theme;
 class AuthenticationController extends Controller
 {
     public function index(Request $request) {
-		$request->session()->pull('user');
 		return Theme::view('site.login');
+	}
+	
+	public function logout(Request $request) {
+		$request->session()->pull('user');
+		return redirect('/');
 	}
 
 	public function dashboard(Request $request) {

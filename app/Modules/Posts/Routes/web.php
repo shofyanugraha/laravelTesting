@@ -11,10 +11,8 @@
 |
 */
 
-Route::group(['prefix' => 'auth'], function () {
-    Route::get('/login', 'AuthenticationController@index');
-    Route::post('/session', 'AuthenticationController@session');
-});
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('/logout', 'AuthenticationController@logotu');
+Route::get('/dashboard', 'PostController@index');
+
+Route::group(['prefix' => 'post', 'middleware'=>'auth'], function () {
+    Route::get('/', 'PostController@index');
 });
