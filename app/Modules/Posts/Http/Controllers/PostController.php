@@ -40,6 +40,7 @@ class PostController extends Controller
     public function store(Request $request) {
     	$param = [];
     	$param = $request->all();
+        $param['title'] = htmlspecialchars($param['title']);
     	$param['writer_id'] = session('user.0.id');
     	
     	if($param['type'] == 'video') {
