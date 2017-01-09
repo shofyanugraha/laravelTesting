@@ -48,18 +48,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span class="hidden-xs">{{ session('user.0.email') }}</span>
                     </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <!-- inner menu: contains the actual data -->
-                        <ul class="menu">
-                          <li>
-                            <a href="{{ url('/logout') }}">
-                              <i class="icon ion-log-out"></i> Logout
-                            </a>
-                          </li>
-                        </ul>
-                        </li>
-                    </ul>
+                  </li>
+                  <li>
+                    <a href="{{ url('/logout') }}">
+                      <i class="icon ion-log-out"></i> Logout
+                    </a>
                   </li>
                 </ul>
               </div>

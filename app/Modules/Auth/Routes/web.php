@@ -16,5 +16,5 @@ Route::group(['prefix' => 'auth'], function () {
     Route::post('/session', 'AuthenticationController@session');
 });
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('/logout', 'AuthenticationController@logotu');
+	Route::get('/logout', 'AuthenticationController@logout');
 });
